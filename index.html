@@ -11,6 +11,31 @@
     <!-- box icons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
+<script>
+    function toggleHoverInfo() {
+        const info = document.getElementById("hoverInfo");
+        info.style.display = info.style.display === "block" ? "none" : "block";
+    }
+    function toggleHoverInfo() {
+        const info = document.getElementById("hoverInfo");
+        info.classList.toggle("show");
+    }
+    function copiarEmail() {
+        const email = "almiraraujo11111@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+            alert("Email copiado com sucesso!");
+        }).catch(() => {
+            alert("Erro ao copiar o email.");
+        });
+    }
+
+    function toggleHoverInfo() {
+        const info = document.getElementById("hoverInfo");
+        info.classList.toggle("show");
+    }
+
+
+</script>
 
 <body>
 
@@ -35,126 +60,147 @@
 
     <main id="inicio" class="cabecalho">
         <img src="./img/perfil2.jpg" alt="Foto do Almir Araújo" class="foto-perfil">
-        <h1>Almir Araújo</h1>
-        <p class="cabecalho-subtitulo">Aspirante a Desenvolvedor Front End</p>
+
+        <div class="nome-hover" onclick="toggleHoverInfo()">
+            <h1>Almir Araújo</h1>
+            <p class="cabecalho-subtitulo">Aspirante a Desenvolvedor Front End</p>
+
+            <div class="hover-info" id="hoverInfo">
+                <button onclick="copiarEmail()" class="botao-copiar">Copiar</button>
+                <span class="email-texto">almiraraujo11111@gmail.com</span>
+                <p>
+                    <a href="/doc/CURRICULO-ESTAGIO-2025 - Almir de Araújo da Silva-site.pdf" target="_blank"
+                        class="botao-curriculo">
+                        📄 Download Curriculo
+                    </a>
+                    </a>
+                </p>
+            </div>
+        </div>
+
         <section id="sobre" class="sobre">
-            <h2 class="sobre-titulo">Sobre mim</h2>
-            <div class="sobre-caixa">
-                <p class="sobre-paragrafo">
-                    <!--//Olá! Sou estudante de Análise e Desenvolvimento de Sistemas, atualmente dando meus primeiros passos no mundo da programaçaoa.Gosto demais de tecnologia desde muito jovem, e agora estou estudando com foco em aprender e crescer na carreira de Desenvolvedor.
+            <!-- conteúdo da seção -->
+        </section>
+    </main>
+
+
+    <h2 class="sobre-titulo">Sobre mim</h2>
+    <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
+            <!--//Olá! Sou estudante de Análise e Desenvolvimento de Sistemas, atualmente dando meus primeiros passos no mundo da programaçaoa.Gosto demais de tecnologia desde muito jovem, e agora estou estudando com foco em aprender e crescer na carreira de Desenvolvedor.
                     Por outro lado, ja tenho bastante experiencia com manutençao de comaputadores e instalaçao de sistemas(um hobby que faço ha um bom tempo e com confiança).
                     Moro em Salvaodor-Ba, sou Capoeirista, gamer nas outras vagas,e com dedicaçao,pesquisa e uma boa dose de cafe e positividade, a gente vai longe!😊-->
-                    Olá! Sou estudante de Análise e Desenvolvimento de Sistemas, atualmente dando meus primeiros passos
-                    no
-                    mundo da programação. Gosto demais de tecnologia desde muito jovem, e agora estou estudando com foco
-                    em aprender e crescer na carreira de desenvolvedor.
+            Olá! Sou estudante de Análise e Desenvolvimento de Sistemas, atualmente dando meus primeiros passos
+            no
+            mundo da programação. Gosto demais de tecnologia desde muito jovem, e agora estou estudando com foco
+            em aprender e crescer na carreira de desenvolvedor.
 
-                    Por outro lado, já tenho bastante experiência com manutenção de computadores e instalação de
-                    sistemas — um hobby que pratico há bastante tempo e com confiança.
+            Por outro lado, já tenho bastante experiência com manutenção de computadores e instalação de
+            sistemas — um hobby que pratico há bastante tempo e com confiança.
 
-                    Moro em Salvador-BA, sou capoeirista, designer, gamer nas horas vagas, e acredito que com dedicação,
-                    curiosidade, uma boa dose de pesquisa, café e positividade,<br>a gente vai longe! 😊👾
-                </p>
-            </div><!--sobre-caixa-->
-        </section>
+            Moro em Salvador-BA, sou capoeirista, designer, gamer nas horas vagas, e acredito que com dedicação,
+            curiosidade, uma boa dose de pesquisa, café e positividade,<br>a gente vai longe! 😊👾
+        </p>
+    </div><!--sobre-caixa-->
+    </section>
 
-        <!-- PROJETOS -->
-        <section id="projetos" class="projetos">
-            <h2 class="projetos-titulo">Meus projetos</h2>
-            <div class="projetos-caixa">
+    <!-- PROJETOS -->
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus projetos</h2>
+        <div class="projetos-caixa">
 
-                <div class="projetos-card">
-                    <img src="./img/projeto1.png" alt="Projeto 1" class="projetos-imagem">
-                    <div class="caixa-textos-projetos">
-                        <h3 class="info-projetos">Loja de Carros</h3>
-                        <p class="paragrafo-projetos">Loja virtual moderna com animaçoes</p>
-                    </div>
+            <div class="projetos-card">
+                <img src="./img/projeto1.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Loja de Carros</h3>
+                    <p class="paragrafo-projetos">Loja virtual moderna com animaçoes</p>
                 </div>
+            </div>
 
-                <div class="projetos-card">
-                    <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
-                    <div class="caixa-textos-projetos">
-                        <h3 class="info-projetos">Loading...</h3>
-                        <p class="paragrafo-projetos">Loading</p>
-                    </div>
+            <div class="projetos-card">
+                <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Loading...</h3>
+                    <p class="paragrafo-projetos">Loading</p>
                 </div>
+            </div>
 
-                <div class="projetos-card">
-                    <img src="./img/projeto3.png" alt="Projeto 1" class="projetos-imagem">
-                    <div class="caixa-textos-projetos">
-                        <h3 class="info-projetos">Loading...</h3>
-                        <p class="paragrafo-projetos">Loading...</p>
-                    </div>
+            <div class="projetos-card">
+                <img src="./img/projeto3.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Loading...</h3>
+                    <p class="paragrafo-projetos">Loading...</p>
                 </div>
-            </div> <!--projetos-caixa-->
-        </section> <!-- PROJETOS -->
+            </div>
+        </div> <!--projetos-caixa-->
+    </section> <!-- PROJETOS -->
 
-        <!-- HELP DESK E DESING CARDS  -->
+    <!-- HELP DESK E DESING CARDS  -->
 
-        <section id="projetos1" class="projetos1">
-            <h2 class="projetos-titulo1">Help Desk & Design</h2>
-            <div class="projetos-caixa1">
+    <section id="projetos1" class="projetos1">
+        <h2 class="projetos-titulo1">Help Desk & Design</h2>
+        <div class="projetos-caixa1">
 
-                <div class="projetos-card">
-                    <img src="./img/projeto1.png" alt="Projeto 2" class="projetos-imagem1">
-                    <div class="caixa-textos-projetos">
-                        <h3 class="info-projetos1">Loja de Carros</h3>
-                        <p class="paragrafo-projetos1">Loja virtual moderna com animaçoes</p>
-                    </div>
+            <div class="projetos-card">
+                <img src="./img/projeto1.png" alt="Projeto 2" class="projetos-imagem1">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos1">Loja de Carros</h3>
+                    <p class="paragrafo-projetos1">Loja virtual moderna com animaçoes</p>
                 </div>
+            </div>
 
-                <div class="projetos-card">
-                    <img src="./img/projeto2.png" alt="Projeto 2" class="projetos-imagem1">
-                    <div class="caixa-textos-projetos">
-                        <h3 class="info-projetos1">Loading...</h3>
-                        <p class="paragrafo-projetos1">Loading</p>
-                    </div>
+            <div class="projetos-card">
+                <img src="./img/projeto2.png" alt="Projeto 2" class="projetos-imagem1">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos1">Loading...</h3>
+                    <p class="paragrafo-projetos1">Loading</p>
                 </div>
+            </div>
 
-                <div class="projetos-card">
-                    <img src="./img/projeto3.png" alt="Projeto 2" class="projetos-imagem1">
-                    <div class="caixa-textos-projetos">
-                        <h3 class="info-projetos1">Loading...</h3>
-                        <p class="paragrafo-projetos1">Loading...</p>
-                    </div>
+            <div class="projetos-card">
+                <img src="./img/projeto3.png" alt="Projeto 2" class="projetos-imagem1">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos1">Loading...</h3>
+                    <p class="paragrafo-projetos1">Loading...</p>
                 </div>
+            </div>
 
 
-            </div> <!--projetos-caixa-->
-        </section><!-- HELP DESK E DESING CARDS  -->
+        </div> <!--projetos-caixa-->
+    </section><!-- HELP DESK E DESING CARDS  -->
 
-   <section id="contatos" class="contatos">
-    <h2 class="contatos-titulo">Entre em Contato</h2>
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
 
-    <form class="formulario-contato" id="formulario" onsubmit="enviarWpp(event)">
-        <div class="grupo-form">
-            <input id="nome" placeholder="Digite seu nome" class="campo-form">
-        </div>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWpp(event)">
+            <div class="grupo-form">
+                <input id="nome" placeholder="Digite seu nome" class="campo-form">
+            </div>
 
-        <div class="grupo-form">
-            <textarea id="mensagem" class="campo-form" placeholder="Digite sua Mensagem" rows="6"></textarea>
-        </div>
+            <div class="grupo-form">
+                <textarea id="mensagem" class="campo-form" placeholder="Digite sua Mensagem" rows="6"></textarea>
+            </div>
 
-        <button type="submit" class="botao-form">Enviar WhatsApp</button>
-    </form>
-</section>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+    </section>
 
-<script>
-    function enviarWpp(event) {
-        event.preventDefault();
-    
-        const nome = document.getElementById("nome").value;
-        const mensagem = document.getElementById("mensagem").value;
-    
-        const telefone = "5571988119067";
+    <script>
+        function enviarWpp(event) {
+            event.preventDefault();
 
-        const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
-        const msgFormatada = encodeURIComponent(texto);
+            const nome = document.getElementById("nome").value;
+            const mensagem = document.getElementById("mensagem").value;
 
-        const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
-        window.open(url, "_blank");
-    }
-</script>
+            const telefone = "5571988119067";
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+            window.open(url, "_blank");
+        }
+    </script>
     </main>
 
     <footer class="rodape">
@@ -162,9 +208,11 @@
         <div class="rodape-icones">
             <a href="https://www.linkedin.com/in/almir-ara%C3%BAjo//" target="_blank" class="icone-linkedin"><i
                     class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/AlmirAraujo27" target="_blank" class="icone-github"><i class='bx bxl-github'></i></a>
+            <a href="https://github.com/AlmirAraujo27" target="_blank" class="icone-github"><i
+                    class='bx bxl-github'></i></a>
         </div>
     </footer>
 
 </body>
+
 </html>

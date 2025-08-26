@@ -96,8 +96,94 @@ body{
     animation: flutuar 6s ease-in-out infinite;
 }
 
+.botao-curriculo {
+  background-color: #fff;
+  color: #fc7100;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 0.4rem 0.8rem;
+  margin: 0.5rem 0.5rem;
+}
 
-h1{
+.botao-curriculo:hover {
+  background-color: #fc7100;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.copiar-email {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.botao-copiar {
+  background-color: #fff;
+  color: #fc7100;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.botao-copiar:hover {
+  background-color: #fc7100;
+  color: #fff;
+}
+
+.email-texto {
+  font-weight: bold;
+  color: #fff;
+}
+
+
+.nome-hover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+/* Estado inicial: invisível e transparente */
+.hover-info {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(252, 113, 0, 0.8);
+  padding: 0.5rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  text-align: center;
+}
+
+/* Classe ativada via JS: visível e opaca */
+.hover-info.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+h1 {
     font-size: 3.5rem;
     color: var(--laranja);
     font-weight: bold;
@@ -333,5 +419,5 @@ h1{
         transform: translateY(0);
     }
 }
-/**/
 
+/**/
